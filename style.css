@@ -1,0 +1,93 @@
+/* Desktop View */
+
+:root {
+    --bkgrd-Color-Body: #dddddd;
+    --bkgrd-Color-Nav: #00337f;
+    --textcolor: #d5dde4;
+    --portledge-white: #ffffff
+}
+
+/* Body, add a background color, margin of zero, border zero, font family */
+body {
+    background-color: var(--bkgrd-Color-Body);
+    margin: 0;
+    border: 0;
+    font-family: "Goudy Bookletter 1911", serif;
+}
+
+/* Header style: add a background color, add a min height, add flex, do some alignment, and other things */
+
+header {
+    background-color: var(--bkgrd-Color-Nav);
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    vertical-align: auto;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 2px solid black;
+}
+
+.logoIcon img {
+    width: 75px;
+}
+
+/* align text to the center */
+nav {
+    text-align: center;
+}
+
+/* Style the nav elements... change the font color, remove the decoration, add some border... */
+nav a {
+    color: var(--textcolor);
+    text-decoration: none;
+    border: 0.05rem solid var(--textcolor);
+    padding: 0.75rem 1.25rem;
+}
+
+/* Style the H1 */
+h1 {
+    color: var(--textcolor);
+
+}
+
+/* Hide all of the mobile navigation */
+.mob-wrapper {
+    display: none;
+}
+
+.burgerMenu {
+    width: 2.5rem;
+}
+
+/* Mobile View */
+@media(max-width:760px) {
+    nav {
+        display: none;
+    }
+
+    .mob-wrapper {
+        display: block;
+    }
+
+    .mob-wrapper a {
+        color: var(--textcolor);
+        text-decoration: none;
+    }
+
+    .mob-nav {
+        display: none;
+        position: absolute;
+    }
+
+    .dropdownBTN {
+        display: block;
+        background-color: goldenrod;
+        padding: 1rem;
+    }
+
+    .dropdownBTN:hover {
+        background-color: aqua;
+        color: black;
+    }
+}
